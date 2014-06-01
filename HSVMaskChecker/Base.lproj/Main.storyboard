@@ -20,9 +20,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="349" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Iok-Gx-USF">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="80" minValue="0.0" maxValue="179" translatesAutoresizingMaskIntoConstraints="NO" id="Iok-Gx-USF">
                                         <rect key="frame" x="66" y="167" width="227" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="changeSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="zXW-qS-i0W"/>
+                                        </connections>
                                     </slider>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6HO-NN-moL">
                                         <rect key="frame" x="144" y="42" width="60" height="71"/>
@@ -74,9 +77,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8gJ-Ym-4vc">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="80" minValue="0.0" maxValue="179" translatesAutoresizingMaskIntoConstraints="NO" id="8gJ-Ym-4vc">
                                         <rect key="frame" x="61" y="474" width="227" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="changeSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZOb-o5-fzS"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyA-wS-Q4f">
                                         <rect key="frame" x="15" y="448" width="18" height="21"/>
@@ -106,9 +112,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C8v-pS-l0A">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="C8v-pS-l0A">
                                         <rect key="frame" x="66" y="226" width="227" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="changeSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="oeX-Yx-iuB"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moo-XA-t8I">
                                         <rect key="frame" x="20" y="200" width="16" height="21"/>
@@ -138,9 +147,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I6d-ga-yQM">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="I6d-ga-yQM">
                                         <rect key="frame" x="66" y="280" width="227" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="changeSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="6dk-mf-0qZ"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="V:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXG-L3-rj0">
                                         <rect key="frame" x="20" y="254" width="15" height="21"/>
@@ -170,9 +182,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dhJ-3N-i6A">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="dhJ-3N-i6A">
                                         <rect key="frame" x="61" y="591" width="227" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="changeSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="i2Z-7z-8LM"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="V:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Nu-Xw-o52">
                                         <rect key="frame" x="15" y="564" width="15" height="21"/>
@@ -202,9 +217,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="80b-5R-nTv">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="80b-5R-nTv">
                                         <rect key="frame" x="61" y="532" width="227" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="changeSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="e7j-s1-2tQ"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm4-AD-olx">
                                         <rect key="frame" x="15" y="506" width="16" height="21"/>
@@ -247,6 +265,22 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="maxHSVColorImage" destination="aL2-Wr-ts8" id="Kzs-lV-6XV"/>
+                        <outlet property="maxHValueLabel" destination="oK2-w2-u1I" id="pOH-Ut-xCN"/>
+                        <outlet property="maxHValueSlier" destination="8gJ-Ym-4vc" id="mvf-kL-bin"/>
+                        <outlet property="maxSValueLabel" destination="jyj-rw-gJT" id="arb-Sx-sgM"/>
+                        <outlet property="maxSValueSlider" destination="80b-5R-nTv" id="HK4-VN-tUx"/>
+                        <outlet property="maxVValueLabel" destination="Yw9-oU-hvx" id="rZl-gz-Rwe"/>
+                        <outlet property="maxVValueSlider" destination="dhJ-3N-i6A" id="ew8-jM-D2Y"/>
+                        <outlet property="minHSVColorImage" destination="6HO-NN-moL" id="QDk-RQ-g0w"/>
+                        <outlet property="minHValueLabel" destination="MAQ-lJ-bFY" id="9lb-Kd-Q6x"/>
+                        <outlet property="minHValueSlider" destination="Iok-Gx-USF" id="Ns6-xk-JLE"/>
+                        <outlet property="minSValueLabel" destination="X8p-A0-fr8" id="Kku-o4-Rd1"/>
+                        <outlet property="minSValueSlider" destination="C8v-pS-l0A" id="Iei-HV-AQh"/>
+                        <outlet property="minVValueLabel" destination="XDT-qc-OBZ" id="iln-0H-oA2"/>
+                        <outlet property="minVValueSlider" destination="I6d-ga-yQM" id="KhI-uF-hfT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
