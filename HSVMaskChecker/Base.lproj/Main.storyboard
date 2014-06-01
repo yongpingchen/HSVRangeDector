@@ -259,16 +259,18 @@
                                 <rect key="frame" x="350" y="0.0" width="674" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRm-lF-yUT">
-                                        <rect key="frame" x="20" y="20" width="81" height="30"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ok-gK-MWd">
+                                        <rect key="frame" x="0.0" y="0.0" width="674" height="768"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Load Image">
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NB-PZ-fdR">
+                                        <rect key="frame" x="20" y="20" width="80" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Load Photo">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="4Ap-Qo-jRk" kind="popover" popoverAnchorView="dRm-lF-yUT" id="h1B-cH-Zga">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
+                                            <action selector="tapLoadPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QRw-zf-Wrx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -294,32 +296,12 @@
                         <outlet property="minSValueSlider" destination="C8v-pS-l0A" id="Iei-HV-AQh"/>
                         <outlet property="minVValueLabel" destination="XDT-qc-OBZ" id="iln-0H-oA2"/>
                         <outlet property="minVValueSlider" destination="I6d-ga-yQM" id="KhI-uF-hfT"/>
+                        <outlet property="photoImage" destination="3Ok-gK-MWd" id="yfj-3E-qkS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-313" y="-201"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="WlH-lU-Rdu">
-            <objects>
-                <viewController id="4Ap-Qo-jRk" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hMe-q4-xKh"/>
-                        <viewControllerLayoutGuide type="bottom" id="pth-iz-1F2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0UR-zq-6y4">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="300" height="300"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LMV-0p-is9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="919" y="-293"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

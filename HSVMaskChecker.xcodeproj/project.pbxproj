@@ -14,13 +14,14 @@
 		7D3A21E9193B28010013CC8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A21E8193B28010013CC8D /* main.m */; };
 		7D3A21ED193B28010013CC8D /* CYPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A21EC193B28010013CC8D /* CYPAppDelegate.m */; };
 		7D3A21F0193B28010013CC8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3A21EE193B28010013CC8D /* Main.storyboard */; };
-		7D3A21F3193B28010013CC8D /* CYPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A21F2193B28010013CC8D /* CYPViewController.m */; };
 		7D3A21F5193B28010013CC8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3A21F4193B28010013CC8D /* Images.xcassets */; };
 		7D3A21FC193B28010013CC8D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3A21FB193B28010013CC8D /* XCTest.framework */; };
 		7D3A21FD193B28010013CC8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3A21DC193B28010013CC8D /* Foundation.framework */; };
 		7D3A21FE193B28010013CC8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3A21E0193B28010013CC8D /* UIKit.framework */; };
 		7D3A2206193B28010013CC8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D3A2204193B28010013CC8D /* InfoPlist.strings */; };
 		7D3A2208193B28010013CC8D /* HSVMaskCheckerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A2207193B28010013CC8D /* HSVMaskCheckerTests.m */; };
+		7D3A2214193B6B6F0013CC8D /* CYPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A2213193B6B6F0013CC8D /* CYPViewController.m */; };
+		7D3A2216193B6D430013CC8D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3A2215193B6D430013CC8D /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,15 @@
 		7D3A21EB193B28010013CC8D /* CYPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYPAppDelegate.h; sourceTree = "<group>"; };
 		7D3A21EC193B28010013CC8D /* CYPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYPAppDelegate.m; sourceTree = "<group>"; };
 		7D3A21EF193B28010013CC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7D3A21F1193B28010013CC8D /* CYPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYPViewController.h; sourceTree = "<group>"; };
-		7D3A21F2193B28010013CC8D /* CYPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYPViewController.m; sourceTree = "<group>"; };
 		7D3A21F4193B28010013CC8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7D3A21FA193B28010013CC8D /* HSVMaskCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSVMaskCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3A21FB193B28010013CC8D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7D3A2203193B28010013CC8D /* HSVMaskCheckerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HSVMaskCheckerTests-Info.plist"; sourceTree = "<group>"; };
 		7D3A2205193B28010013CC8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7D3A2207193B28010013CC8D /* HSVMaskCheckerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVMaskCheckerTests.m; sourceTree = "<group>"; };
+		7D3A2212193B6B6F0013CC8D /* CYPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPViewController.h; sourceTree = "<group>"; };
+		7D3A2213193B6B6F0013CC8D /* CYPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPViewController.m; sourceTree = "<group>"; };
+		7D3A2215193B6D430013CC8D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3A2216193B6D430013CC8D /* MobileCoreServices.framework in Frameworks */,
 				7D3A21DF193B28010013CC8D /* CoreGraphics.framework in Frameworks */,
 				7D3A21E1193B28010013CC8D /* UIKit.framework in Frameworks */,
 				7D3A21DD193B28010013CC8D /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		7D3A21DB193B28010013CC8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D3A2215193B6D430013CC8D /* MobileCoreServices.framework */,
 				7D3A21DC193B28010013CC8D /* Foundation.framework */,
 				7D3A21DE193B28010013CC8D /* CoreGraphics.framework */,
 				7D3A21E0193B28010013CC8D /* UIKit.framework */,
@@ -112,11 +116,10 @@
 		7D3A21E2193B28010013CC8D /* HSVMaskChecker */ = {
 			isa = PBXGroup;
 			children = (
+				7D3A2211193B6B6F0013CC8D /* viewControllers */,
 				7D3A21EB193B28010013CC8D /* CYPAppDelegate.h */,
 				7D3A21EC193B28010013CC8D /* CYPAppDelegate.m */,
 				7D3A21EE193B28010013CC8D /* Main.storyboard */,
-				7D3A21F1193B28010013CC8D /* CYPViewController.h */,
-				7D3A21F2193B28010013CC8D /* CYPViewController.m */,
 				7D3A21F4193B28010013CC8D /* Images.xcassets */,
 				7D3A21E3193B28010013CC8D /* Supporting Files */,
 			);
@@ -150,6 +153,15 @@
 				7D3A2204193B28010013CC8D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D3A2211193B6B6F0013CC8D /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D3A2212193B6B6F0013CC8D /* CYPViewController.h */,
+				7D3A2213193B6B6F0013CC8D /* CYPViewController.m */,
+			);
+			path = viewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D3A21E9193B28010013CC8D /* main.m in Sources */,
-				7D3A21F3193B28010013CC8D /* CYPViewController.m in Sources */,
+				7D3A2214193B6B6F0013CC8D /* CYPViewController.m in Sources */,
 				7D3A21ED193B28010013CC8D /* CYPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +480,7 @@
 				7D3A220D193B28010013CC8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D3A220E193B28010013CC8D /* Build configuration list for PBXNativeTarget "HSVMaskCheckerTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +489,7 @@
 				7D3A2210193B28010013CC8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
