@@ -70,14 +70,14 @@ using namespace cv;
     int value = [(UISlider *)sender value];
     NSInteger index = [sliderArray indexOfObject:sender];
     UILabel *valueLabel = [valueLabelArray objectAtIndex:index];
+    int currentValue = valueLabel.text.intValue;
+    if (currentValue == value) {
+        return;
+    }
     valueLabel.text = [NSString stringWithFormat:@"%d",value];
     
     //mask the image
     IplImage *iplImage = [CYPViewController CreateIplImageFromUIImage:originImage];
-
-    IplImage *imgRGB = cvCreateImage(cvGetSize(iplImage), IPL_DEPTH_8U, 3);
-    cvCvtColor(iplImage, imgRGB, CV_BGR2RGB);
-    Mat matRGB = Mat(imgRGB);
     
     //ipl imaeg is also converted to HSV; hue is used to find certain color
     IplImage *imgHSV = cvCreateImage(cvGetSize(iplImage), 8, 3);
@@ -88,6 +88,8 @@ using namespace cv;
     //it is important to release all images EXCEPT the one that is going to be passed to
     //the didFinishProcessingImage: method and displayed in the UIImageView
     cvReleaseImage(&iplImage);
+    
+    UIImage *imageHSV = [CYPViewController UIImageFromIplImage:imgHSV];
     
     //filter all pixels in defined range, everything in range will be white, everything else
     //is going to be black
@@ -185,61 +187,38 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     CGContextRelease(contextRef);
     CGColorSpaceRelease(colorSpace);
     
-    
-    NSLog(@"image->width = %d" , iplimage->width);
-    NSLog(@"image->height = %d" , iplimage->height);
-    
     // Creating result IplImage
     IplImage *ret = cvCreateImage(cvGetSize(iplimage), IPL_DEPTH_8U, 3);
     cvCvtColor(iplimage, ret, CV_RGBA2BGR);
     cvReleaseImage(&iplimage);
     
-    
-    
     return ret;
 }
 
 
-+(UIImage *)UIImageFromIplImage:(cv::Mat)aMat
++(UIImage *)UIImageFromIplImage:(IplImage *)image
 {
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    
-    unsigned char* data = new unsigned char[4*aMat.cols * aMat.rows];
-    for (int y = 0; y < aMat.rows; ++y)
-    {
-        cv::Vec3b *ptr = aMat.ptr<cv::Vec3b>(y);
-        unsigned char *pdata = data + 4*y*aMat.cols;
-        
-        for (int x = 0; x < aMat.cols; ++x, ++ptr)
-        {
-            *pdata++ = (*ptr)[2];
-            *pdata++ = (*ptr)[1];
-            *pdata++ = (*ptr)[0];
-            *pdata++ = 0;
-        }
-    }
-    
-    // Bitmap context
-    CGContextRef context = CGBitmapContextCreate(data, aMat.cols, aMat.rows, 8, 4*aMat.cols, colorSpace, kCGImageAlphaNoneSkipLast);
-    
-    
-    
-    CGImageRef cgimage = CGBitmapContextCreateImage(context);
-    
-    UIImage *ret = [UIImage imageWithCGImage:cgimage scale:1.0
-                                 orientation:UIImageOrientationUp];
-    
-    CGImageRelease(cgimage);
-    
-    CGContextRelease(context);  
-    
-    // CGDataProviderRelease(provider);
-    
+    // Allocating the buffer for CGImage
+    NSData *data =
+    [NSData dataWithBytes:image->imageData length:image->imageSize];
+    CGDataProviderRef provider =
+    CGDataProviderCreateWithCFData((CFDataRef)data);
+    // Creating CGImage from chunk of IplImage
+    CGImageRef imageRef = CGImageCreate(
+                                        image->width, image->height,
+                                        image->depth, image->depth * image->nChannels, image->widthStep,
+                                        colorSpace, kCGImageAlphaNone|kCGBitmapByteOrderDefault,
+                                        provider, NULL, false, kCGRenderingIntentDefault
+                                        );
+    // Getting UIImage from CGImage
+    UIImage *ret = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    CGDataProviderRelease(provider);
     CGColorSpaceRelease(colorSpace);
-    
-    
     return ret;
+    
 }
 
 
