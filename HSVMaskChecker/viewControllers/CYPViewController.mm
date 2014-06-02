@@ -74,10 +74,6 @@ using namespace cv;
     
     //mask the image
     IplImage *iplImage = [CYPViewController CreateIplImageFromUIImage:originImage];
-    
-    IplImage *rgbImage = cvCreateImage(cvGetSize(iplImage), IPL_DEPTH_8U, 3);
-    cvCvtColor(iplImage, rgbImage, CV_BGR2RGB);
-    cvReleaseImage(&iplImage);
 
     IplImage *imgRGB = cvCreateImage(cvGetSize(iplImage), IPL_DEPTH_8U, 3);
     cvCvtColor(iplImage, imgRGB, CV_BGR2RGB);
@@ -95,9 +91,8 @@ using namespace cv;
     
     //filter all pixels in defined range, everything in range will be white, everything else
     //is going to be black
-    //    cvInRangeS(imgHSV, cvScalar(_min, 100, 100), cvScalar(_max, 255, 255), imgThreshed);
-    cvInRangeS(imgHSV, cvScalar(67, 125, 255), cvScalar(67, 255, 255), imgThreshed);
-    
+//    cvInRangeS(imgHSV, cvScalar(67, 125, 255), cvScalar(67, 255, 255), imgThreshed);
+    cvInRangeS(imgHSV, cvScalar(_minHValueLabel.text.intValue, _minSValueLabel.text.intValue, _minVValueLabel.text.intValue), cvScalar(_maxHValueLabel.text.intValue, _maxSValueLabel.text.intValue, _maxVValueLabel.text.intValue), imgThreshed);
     cvReleaseImage(&imgHSV);
     
     UIImage *convertedImage = [CYPViewController UIImageFromIplImage:imgThreshed];
