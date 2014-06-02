@@ -89,15 +89,18 @@ using namespace cv;
     //the didFinishProcessingImage: method and displayed in the UIImageView
     cvReleaseImage(&iplImage);
     
-    UIImage *imageHSV = [CYPViewController UIImageFromIplImage:imgHSV];
-    
     //filter all pixels in defined range, everything in range will be white, everything else
     //is going to be black
-//    cvInRangeS(imgHSV, cvScalar(67, 125, 255), cvScalar(67, 255, 255), imgThreshed);
+//    cvInRangeS(imgHSV, cvScalar(0, 0, 255), cvScalar(45, 72, 255), imgThreshed);
     cvInRangeS(imgHSV, cvScalar(_minHValueLabel.text.intValue, _minSValueLabel.text.intValue, _minVValueLabel.text.intValue), cvScalar(_maxHValueLabel.text.intValue, _maxSValueLabel.text.intValue, _maxVValueLabel.text.intValue), imgThreshed);
     cvReleaseImage(&imgHSV);
     
-    UIImage *convertedImage = [CYPViewController UIImageFromIplImage:imgThreshed];
+    //UIImage view couln't directly load grey image, so need to convert gray image to BGR image
+    IplImage* grayImagePlus = cvCreateImage(cvGetSize(imgThreshed), IPL_DEPTH_8U, 3);
+    cvCvtColor(imgThreshed, grayImagePlus, CV_GRAY2BGR);
+
+    
+    UIImage *convertedImage = [CYPViewController UIImageFromIplImage:grayImagePlus];
     [_photoImage setImage:convertedImage];
     
     cvReleaseImage(&imgThreshed);
