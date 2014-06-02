@@ -98,9 +98,8 @@ using namespace cv;
     //UIImage view couln't directly load grey image, so need to convert gray image to BGR image
     IplImage* grayImagePlus = cvCreateImage(cvGetSize(imgThreshed), IPL_DEPTH_8U, 3);
     cvCvtColor(imgThreshed, grayImagePlus, CV_GRAY2BGR);
-
-    
     UIImage *convertedImage = [CYPViewController UIImageFromIplImage:grayImagePlus];
+    cvReleaseImage(&grayImagePlus);
     [_photoImage setImage:convertedImage];
     
     cvReleaseImage(&imgThreshed);
