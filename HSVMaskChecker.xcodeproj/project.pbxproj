@@ -20,8 +20,9 @@
 		7D3A21FE193B28010013CC8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3A21E0193B28010013CC8D /* UIKit.framework */; };
 		7D3A2206193B28010013CC8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D3A2204193B28010013CC8D /* InfoPlist.strings */; };
 		7D3A2208193B28010013CC8D /* HSVMaskCheckerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A2207193B28010013CC8D /* HSVMaskCheckerTests.m */; };
-		7D3A2214193B6B6F0013CC8D /* CYPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A2213193B6B6F0013CC8D /* CYPViewController.m */; };
 		7D3A2216193B6D430013CC8D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3A2215193B6D430013CC8D /* MobileCoreServices.framework */; };
+		7D7D6D32193B759900902245 /* CYPViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D6D31193B759900902245 /* CYPViewController.mm */; };
+		CFA479D407004DFB90721ABA /* libPods-HSVMaskChecker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3698FDCDF84B49DBBDF17B2A /* libPods-HSVMaskChecker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3698FDCDF84B49DBBDF17B2A /* libPods-HSVMaskChecker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HSVMaskChecker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3A21D9193B28010013CC8D /* HSVMaskChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSVMaskChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3A21DC193B28010013CC8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7D3A21DE193B28010013CC8D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,8 +55,9 @@
 		7D3A2205193B28010013CC8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7D3A2207193B28010013CC8D /* HSVMaskCheckerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVMaskCheckerTests.m; sourceTree = "<group>"; };
 		7D3A2212193B6B6F0013CC8D /* CYPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPViewController.h; sourceTree = "<group>"; };
-		7D3A2213193B6B6F0013CC8D /* CYPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPViewController.m; sourceTree = "<group>"; };
 		7D3A2215193B6D430013CC8D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7D7D6D31193B759900902245 /* CYPViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CYPViewController.mm; sourceTree = "<group>"; };
+		7E3BFF89FA1F470A8A9DEB1F /* Pods-HSVMaskChecker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSVMaskChecker.xcconfig"; path = "Pods/Pods-HSVMaskChecker.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 				7D3A21DF193B28010013CC8D /* CoreGraphics.framework in Frameworks */,
 				7D3A21E1193B28010013CC8D /* UIKit.framework in Frameworks */,
 				7D3A21DD193B28010013CC8D /* Foundation.framework in Frameworks */,
+				CFA479D407004DFB90721ABA /* libPods-HSVMaskChecker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +93,7 @@
 				7D3A2201193B28010013CC8D /* HSVMaskCheckerTests */,
 				7D3A21DB193B28010013CC8D /* Frameworks */,
 				7D3A21DA193B28010013CC8D /* Products */,
+				7E3BFF89FA1F470A8A9DEB1F /* Pods-HSVMaskChecker.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +114,7 @@
 				7D3A21DE193B28010013CC8D /* CoreGraphics.framework */,
 				7D3A21E0193B28010013CC8D /* UIKit.framework */,
 				7D3A21FB193B28010013CC8D /* XCTest.framework */,
+				3698FDCDF84B49DBBDF17B2A /* libPods-HSVMaskChecker.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,8 +164,8 @@
 		7D3A2211193B6B6F0013CC8D /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7D7D6D31193B759900902245 /* CYPViewController.mm */,
 				7D3A2212193B6B6F0013CC8D /* CYPViewController.h */,
-				7D3A2213193B6B6F0013CC8D /* CYPViewController.m */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -171,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D3A220B193B28010013CC8D /* Build configuration list for PBXNativeTarget "HSVMaskChecker" */;
 			buildPhases = (
+				33618843371444E8928C7EC0 /* Check Pods Manifest.lock */,
 				7D3A21D5193B28010013CC8D /* Sources */,
 				7D3A21D6193B28010013CC8D /* Frameworks */,
 				7D3A21D7193B28010013CC8D /* Resources */,
+				E5165BF2B0344907A67BF5CE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,13 +268,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33618843371444E8928C7EC0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5165BF2B0344907A67BF5CE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-HSVMaskChecker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7D3A21D5193B28010013CC8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D7D6D32193B759900902245 /* CYPViewController.mm in Sources */,
 				7D3A21E9193B28010013CC8D /* main.m in Sources */,
-				7D3A2214193B6B6F0013CC8D /* CYPViewController.m in Sources */,
 				7D3A21ED193B28010013CC8D /* CYPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +432,7 @@
 		};
 		7D3A220C193B28010013CC8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E3BFF89FA1F470A8A9DEB1F /* Pods-HSVMaskChecker.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -407,6 +449,7 @@
 		};
 		7D3A220D193B28010013CC8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E3BFF89FA1F470A8A9DEB1F /* Pods-HSVMaskChecker.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
